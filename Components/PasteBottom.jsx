@@ -1,10 +1,10 @@
 import { StyleSheet, View, Text } from 'react-native'
 
-const PasteBottom = () => {
+const PasteBottom = ({ getText }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.textBold}>
-                test
+                {getText}
             </Text>
         </View>
     )

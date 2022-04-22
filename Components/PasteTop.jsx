@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native'
 
-const PasteTop = () => {
+const PasteTop = ({ getText }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.textBold}>Paste Text</Text>
-            <Text style={styles.textBold}>Input or Paster Your Text</Text>
+            <Text style={styles.textBold}>{getText}</Text>
         </View>
     )
 }
