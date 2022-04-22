@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import PasteTop from './Components/PasteTop'
-import PasteBottom from './Components/PasteBottom';
+import {PasteTop, PasteBottom} from './Components'
 
 export default function App() {
   return (
