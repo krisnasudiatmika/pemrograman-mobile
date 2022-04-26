@@ -1,31 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
-import {useState} from 'react'
-import {PasteTop, PasteBottom} from './Components'
+
+
+import IndexPage from './Components/pages';
+
 
 export default function App() {
-  const [textAtas, setTextAtas] = useState('');
-  const [textBawah, setTextBawah] = useState('')
+ 
   return (
-    <View>
-      <PasteTop getText={textAtas}/>
-      <PasteBottom getText={textBawah}/>
-      <View style={styles.textInputWrapper}>
-      <TextInput style={styles.textInput} placeholder="Input Text Satu" onChangeText={value => setTextAtas(value)}/>
-      <TextInput style={styles.textInput} placeholder="Input Text Satu" onChangeText={value => setTextBawah(value)}/>
-      </View>
-  
-    </View>
+    <IndexPage/>
   );
 }
 
-
-const styles = StyleSheet.create({
- textInput:{
-   borderWidth: 5
- },
- textInputWrapper:{
-   marginTop: 20
- }
-});
 
