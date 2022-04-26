@@ -1,14 +1,14 @@
 import { View, Text, StyleSheet } from 'react-native'
 
-const ListComponent = () => {
+const ListComponent = ({ title, subTitle }) => {
     return (
         <View style={styles.wrapper}>
             <View style={styles.imageContainer}>
                 <Text>m</Text>
             </View>
             <View>
-                <Text>Title</Text>
-                <Text>Sub title</Text>
+                <Text>{title}</Text>
+                <Text>{subTitle}</Text>
             </View>
         </View>
     )
@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 10,
         marginHorizontal: 10,
         paddingHorizontal: 10,
-        paddingVertical: 10
+        paddingVertical: 10,
+        marginBottom: 10
     },
     imageContainer: {
         height: 40,
