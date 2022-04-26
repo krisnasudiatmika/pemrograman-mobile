@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-const ListComponent = ({ title, subTitle }) => {
+const ListComponent = ({ title, subTitle, onChange, index, identifyCheck }) => {
     return (
-        <View style={styles.wrapper}>
+        <TouchableOpacity style={[styles.wrapper, identifyCheck === index ? { backgroundColor: '#fffF00' } : { backgroundColor: '#fff' }]} onPress={onChange}>
             <View style={styles.imageContainer}>
                 <Text>m</Text>
             </View>
@@ -10,7 +10,7 @@ const ListComponent = ({ title, subTitle }) => {
                 <Text>{title}</Text>
                 <Text>{subTitle}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -20,7 +20,7 @@ export default ListComponent
 const styles = StyleSheet.create({
     wrapper: {
         flexDirection: 'row',
-        backgroundColor: '#fff',
+
         borderTopRightRadius: 10,
         borderBottomEndRadius: 10,
         borderBottomLeftRadius: 10,

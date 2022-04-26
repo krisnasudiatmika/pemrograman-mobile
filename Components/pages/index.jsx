@@ -1,13 +1,17 @@
 import { View, ScrollView, StyleSheet } from 'react-native'
 import ListComponent from '../ListComponent'
-
+import { useState } from 'react'
 const IndexPage = () => {
+
+    const [changeColor, setChangeColor] = useState(null);
+
+
     return (
         <View style={styles.container}>
             <ScrollView contentContainerStyle={{ paddingBottom: 60 }}>
                 {dummyData.map((val, index) => {
                     return (
-                        <ListComponent key={index} title={val.title} subTitle={val.subtitle} />
+                        <ListComponent key={index} identifyCheck={changeColor} index={index} title={val.title} subTitle={val.subtitle} onChange={() => setChangeColor(index)} />
                     )
                 })}
 
