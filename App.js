@@ -8,13 +8,7 @@ export default function App() {
   const [textBawah, setTextBawah] = useState('')
   return (
     <View>
-      <PasteTop getText={textAtas}/>
-      <PasteBottom getText={textBawah}/>
-      <View style={styles.textInputWrapper}>
-      <TextInput style={styles.textInput} placeholder="Input Text Satu" onChangeText={value => setTextAtas(value)}/>
-      <TextInput style={styles.textInput} placeholder="Input Text Satu" onChangeText={value => setTextBawah(value)}/>
-      </View>
-  
+    <Text>Hello World</Text>
     </View>
   );
 }
