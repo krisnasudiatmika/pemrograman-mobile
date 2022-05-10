@@ -1,25 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import {useState} from 'react'
-import {PasteTop, PasteBottom} from './Components'
+import AlertModal from './Components/AlertModal';
 
 export default function App() {
-  const [textAtas, setTextAtas] = useState('');
-  const [textBawah, setTextBawah] = useState('')
+
   return (
-    <View>
-    <Text>Hello World</Text>
+    <View style={styles.container}>
+      <AlertModal/>
     </View>
   );
 }
 
 
 const styles = StyleSheet.create({
- textInput:{
-   borderWidth: 5
- },
- textInputWrapper:{
-   marginTop: 20
- }
+  container:{
+    paddingTop: 100
+  }
 });
 
